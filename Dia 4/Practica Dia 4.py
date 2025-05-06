@@ -57,30 +57,106 @@ for (a,b) in dic.items():
 
 # LOOP WHILE
 
-monedas = 5
+# monedas = 5
 
-while monedas > 0:
-  print(f"Tengo {monedas} monedas")
-  monedas -= 1
-else: print("No tengo mas dinero")
+# while monedas > 0:
+#   print(f"Tengo {monedas} monedas")
+#   monedas -= 1
+# else: print("No tengo mas dinero")
 
-respueta = 's'
+# respueta = 's'
 
-while respueta == 's':
-  respueta = input("Quieres seguir? (s/n)")
-else:
-  print("Gracias")
+# while respueta == 's':
+#   respueta = input("Quieres seguir? (s/n)")
+# else:
+#   print("Gracias")
 
-name = input("Tu nombre: ")
+# name = input("Tu nombre: ")
 
-for letra in name:
-  if letra == 'r':
-    break
-  print(letra)
+# for letra in name:
+#   if letra == 'r':
+#     break
+#   print(letra)
 
-print('\n')
+# print('\n')
 
-for letra in name:
-  if letra == 'r':
-    continue
-  print(letra)
+# for letra in name:
+#   if letra == 'r':
+#     continue
+#   print(letra)
+
+# RANGE
+
+for numero in range(1,5):
+  print(numero)
+
+lista = list(range(1,101, 2))
+print(lista)
+
+# ENUM
+lista = ['a', 'b', 'c']
+indice = 0
+
+for item in enumerate(lista):
+  print(item)
+
+for indice, item in enumerate(lista):
+  print(indice, item)
+
+for indice, item in enumerate(range(50, 55)):
+  print(indice, item)
+
+mis_tuples = list(enumerate(lista))
+print(mis_tuples)
+print(mis_tuples[1][0])
+
+# ZIP
+
+nombre = ['Ana', 'Hugo', 'Valeria']
+edades = [65,29,42]
+ciudades = ['Lima', 'Madrid', 'Mexico']
+
+combinados = list(zip(nombre, edades, ciudades))
+print(combinados)
+
+for nombre, edad, ciudad in combinados:
+  print(f"{nombre} tiene {edad} años y vive en {ciudad}")
+
+# MIN & MAX
+
+menor = min(58,98,72,64,35)
+mayor = max(58,98,72,64,35)
+print(menor)
+print(mayor)
+
+lista = [58,98,72,64,35]
+print(f"El menor es {min(lista)} y el mayor es {max(lista)}")
+
+string = 'Carlos'
+print(min(string.lower()))
+
+dic = {'c1': 45, 'c2': 11}
+print(min(dic))
+print(min(dic.values()))
+
+# RANDOM
+
+from random import randint
+from random import *
+
+aleatorio = randint(1, 50)
+print(aleatorio)
+
+aleatorio2 = round(uniform(1, 5),2)
+print(aleatorio2)
+
+aleatorio3 = random()
+print(aleatorio3)
+
+colores = ['azul', 'rojo', 'verde', 'amarillo']
+aleatorio4 = choice(colores)
+print(aleatorio4)
+
+numeros1 = list(range(5,50,5))
+shuffle(numeros1)
+print(numeros1)
