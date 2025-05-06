@@ -54,3 +54,33 @@ for item in dic.values():
 
 for (a,b) in dic.items():
   print(a,b)
+
+# LOOP WHILE
+
+monedas = 5
+
+while monedas > 0:
+  print(f"Tengo {monedas} monedas")
+  monedas -= 1
+else: print("No tengo mas dinero")
+
+respueta = 's'
+
+while respueta == 's':
+  respueta = input("Quieres seguir? (s/n)")
+else:
+  print("Gracias")
+
+name = input("Tu nombre: ")
+
+for letra in name:
+  if letra == 'r':
+    break
+  print(letra)
+
+print('\n')
+
+for letra in name:
+  if letra == 'r':
+    continue
+  print(letra)
