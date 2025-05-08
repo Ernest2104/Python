@@ -160,3 +160,10 @@ print(aleatorio4)
 numeros1 = list(range(5,50,5))
 shuffle(numeros1)
 print(numeros1)
+
+# COMPRENSION DE LISTAS
+
+metros = [10, 20, 30, 40, 50]
+pies = [p*3.281 for p in metros]
+
+print (pies)
