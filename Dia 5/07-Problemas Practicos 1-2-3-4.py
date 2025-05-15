@@ -35,5 +35,37 @@ Por ejemplo:
 def cero_repetido(*args):
   cont_0 = 0
   for arg in args:
-    if arg = 0:
-      
+    if cont_0 + 1 == len(args):
+      return False
+    elif args[cont_0] == 0 and args[cont_0 + 1] == 0:
+      return True
+    else:
+      cont_0 +=1
+  
+  return False
+  
+#print(cero_repetido(5,6,1,9,3,5,0,0,7,3,2,6))
+
+print("""\nEJERCICIO 4: Escribe una función llamada contar_primos() que requiera un solo argumento numérico.
+Esta función va a mostrar en pantalla cuántos números primos hay en el rango que va desde cero hasta ese número incluido, y va a devolver la cantida de números primos que encontró. Aclaración, por convención el 0 y el 1 no se consideran primos.\n""")
+
+def es_primo(numero):
+  for n in range(2, numero):
+    if numero % n == 0:
+      return False
+  return True
+
+def contar_primos(num):
+  primos = []
+  contador = 0
+  for n in range(0,num):
+    if n > 1:
+      if es_primo(n):
+        primos.append(n)
+        contador +=1
+    else:
+      continue
+  return primos, contador
+
+#print(f"Los numeros primos en el rango son: {contar_primos(100)[0]}")
+#print(f"La cantidad de numeros en el rango son: {contar_primos(100)[1]}")
