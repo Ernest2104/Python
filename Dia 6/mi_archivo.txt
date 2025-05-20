@@ -1,0 +1,3 @@
+Para escribir en un archivo desde Python, 
+deberemos elegir con cuidado el parámetro 
+"modo de apertura".

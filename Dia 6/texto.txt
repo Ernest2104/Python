@@ -1,0 +1,18 @@
+ El volumen de la unidad E es DATA
+ El n£mero de serie del volumen es: 4A93-5E36
+
+ Directorio de E:\FILES\USERS\ALVARO.ASSAF\0
+
+19/11/2013  09:06        12.379.064 CH.exe
+               1 archivos     12.379.064 bytes
+
+ Directorio de E:\FILES\USERS\ALVARO.ASSAF\0 BORIS\PHT FANCESA
+
+11/09/2015  14:59           112.656 tekla_dstv2dxf.exe
+               1 archivos        112.656 bytes
+
+ Directorio de E:\FILES\USERS\ALVARO.ASSAF\0-ASSAF\00-ALVARO\CAD 2004\EM
+
+24/08/2011  09:03        15.755.872 FirefoxPortable_6.0_English.paf.exe
+07/06/2011  09:14         6.280.056 Silverlight.exe
+               2 archivos     22.035.928 bytes
