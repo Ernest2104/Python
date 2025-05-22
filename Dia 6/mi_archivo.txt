@@ -1,3 +1,5 @@
-Para escribir en un archivo desde Python, 
-deberemos elegir con cuidado el parÃ¡metro 
-"modo de apertura".
+Nuevo textoNuevo inicio de sesión
+Nuevo inicio de sesión
+Nuevo inicio de sesión
+Nuevo inicio de sesión
+Nuevo inicio de sesión

@@ -14,15 +14,14 @@ def obtener_palabra():
   palabra_secreta = choice(lista_palabras)
   print(palabra_secreta)
   return palabra_secreta
-  """ print(f"La palabra secreta contiene ({len(palabra_secreta)} caracteres): {palabra_secreta.replace(palabra_secreta, '_'*len(palabra_secreta))}")
- """
+
 def pedir_letra():
   letra = input("Ingrese la letra: ")
   return letra
 
 def validar_letra():
   letra_elegida = pedir_letra()
-  while letra_elegida not in ('abcdefghijklmnopqrstuvwxyz') or len(letra_elegida) != 1:
+  while letra_elegida not in ('abcdefghijklmnñopqrstuvwxyz') or len(letra_elegida) != 1:
     print('No es una letra valida, ingrese otra.\n')
     letra_elegida = pedir_letra()
   #  continue
@@ -49,7 +48,7 @@ def chequear_letra():
       lista_incorrectas.append(letra)
       vidas -=1
       print(f"La letra '{letra}' no está en la palabra. Le quedan {vidas} intentos.\n")
-      print(f"Las letras ingresadas son: {lista_incorrectas}")
+      print(f"Las letras incorrectas ingresadas son: {lista_incorrectas}\n")
     else:
       print("La letra si está en la palabra")
       aux_palabra.append(''.join([letra if l == letra else '_' for l in pal_sec]))
@@ -58,7 +57,7 @@ def chequear_letra():
         print(aux_palabra) """
       print('_'.join(aux_palabra))
 
-  print("Lo siento a perdido...")
+  print(f"Lo siento a perdido, la palabra era: {pal_sec}")
 
 chequear_letra()
   
