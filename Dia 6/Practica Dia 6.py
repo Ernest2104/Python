@@ -28,7 +28,7 @@ archivo.close() """
 
 # DIRECTORIOS
 
-import os
+import os 
 
 #ruta = os.getcwd() # -> Directorio actual
 #ruta = os.chdir('Aqui va la ruta') # -> Cambiar directorio
@@ -42,8 +42,12 @@ import os
 #print(ruta)
 
 from pathlib import Path
+from os import system
 
 base = Path.home()
-
 print(base)
 
+nombre = input('Dime tu nombre: ')
+edad = input('Dime tu edad: ')
+system('cls')
+print(f"Tu nombre es {nombre} y tienes {edad} años")
