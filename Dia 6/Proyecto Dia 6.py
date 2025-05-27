@@ -55,14 +55,37 @@ def obtener_categorias():
   categoria = os.listdir(ruta)
   return categoria
 
+def obtener_recetas(ruta):
+  recetas = os.listdir(ruta)
+  return recetas
+
 #menu()
 
 def leer_receta():
-  print(f"Que categoria desea ver:\n1-{obtener_categorias()[0]} 2-{obtener_categorias()[1]} 3-{obtener_categorias()[2]} 4-{obtener_categorias()[3]}\n")
-  cat_ele = input("Ingrese la categoria (1,2,3,4): ")
+  num_receta = 1
+  print("Que categoria desea ver:")
+  for c in obtener_categorias():
+    print(f"{num_receta} - {c}")
+    num_receta +=1
+  cat_ele = input(f"Ingrese la categoria (1-{num_receta-1}): ")
   if cat_ele == "1":
-    ruta1 = Path(base, 'Desktop', 'Python', 'Recetas', obtener_categorias()[0])
-    print(ruta1)
+    ruta_cat1 = Path(base, 'Desktop', 'Python', 'Recetas', obtener_categorias()[0])
+    recetas_cat_1 = obtener_recetas(ruta_cat1)
+    print(f"Que receta desea ver:\n1-{recetas_cat_1[0]} 2-{recetas_cat_1[1]}\n")
+    receta_ele = input("Ingrese la receta que desea ver (1,2): ")
+    if receta_ele == "1":
+      print(Path(ruta_cat1, recetas_cat_1[0]).read_text())
+    elif receta_ele == "2":
+      print(Path(ruta_cat1, recetas_cat_1[1]).read_text())
+  elif cat_ele == "2":
+    ruta_cat2 = Path(base, 'Desktop', 'Python', 'Recetas', obtener_categorias()[1])
+    recetas_cat_2 = obtener_recetas(ruta_cat2)
+    print(f"Que receta desea ver:\n1-{recetas_cat_2[0]} 2-{recetas_cat_2[1]}\n")
+    receta_ele = input("Ingrese la receta que desea ver (1,2): ")
+    if receta_ele == "1":
+      print(Path(ruta_cat2, recetas_cat_2[0]).read_text())
+    elif receta_ele == "2":
+      print(Path(ruta_cat2, recetas_cat_2[1]).read_text())
 
 leer_receta()
 
