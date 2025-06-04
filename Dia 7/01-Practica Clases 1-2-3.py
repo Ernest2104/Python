@@ -19,7 +19,7 @@ braquiosaurio = Dinosaurio()
 
 print(velociraptor, tiranosaurio_rex, braquiosaurio)
 
-print("""\nEJERCICIO 2: Crea una clase llamada PlataformaStreaming y crea los siguientes objetos a partir de ella: netflix, hbo_max, amazon_prime_video\n""")
+print("""\nEJERCICIO 3: Crea una clase llamada PlataformaStreaming y crea los siguientes objetos a partir de ella: netflix, hbo_max, amazon_prime_video\n""")
 
 class PlataformaStreaming:
   pass
