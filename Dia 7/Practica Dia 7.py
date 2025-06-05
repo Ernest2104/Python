@@ -44,8 +44,44 @@ class Pajaro:
 
   def volar(self, metros):
     print(f"El pajaro ha volado {metros} metros")
+    self.piar()
 
-piolin = Pajaro('amarillo', 'canario')
+  def pintar_negro(self):
+    self.color = 'negro'
+    print(f"Ahora el pajaro es {self.color}")
+  
+  @classmethod
+  def poner_huevos(cls, cantidad):
+    print(f"Puso {cantidad} huevos")
+    cls.alas = False
+
+  @staticmethod
+  def mirar():
+    print("El pajaro mira")
+
+""" piolin = Pajaro('amarillo', 'canario')
 
 piolin.piar()
 piolin.volar(50)
+
+piolin.alas = False
+print(piolin.alas) """
+
+Pajaro.poner_huevos(3)
+print(Pajaro.alas)
+
+# TIPOS DE METODOS
+
+Pajaro.mirar()
+
+#HERENCIA
+
+class Animal():
+  pass
+
+class Pajaro(Animal):
+  pass
+
+print(Pajaro.__bases__)
+print(Pajaro.__subclasses__)
+#print(Animal.__subclasses__)
