@@ -29,5 +29,51 @@ Crea una clase Ornitorrinco que herede de otras clases: Vertebrado, Pez, Reptil,
 - caminar()
 - amamantar()\n""")
 
+class Vertebrado():
+  vertebrado = True
 
+class Pez(Vertebrado):
+  def nadar(self):
+    print("Nadando")
+  def poner_huevos(self):
+    print("Poniendo huevos")
+
+class Reptil(Vertebrado):
+  venenoso = True
+
+class Ave(Vertebrado):
+  tiene_pico = True
+  def poner_huevos(self):
+    print("Poniendo huevos")
+
+class Mamifero(Vertebrado):
+  def amamantar(self):
+    print("Puedo amamantar")
+  def Caminar(self):
+    print("Puedo caminar")
+
+class Ornitorrinco(Ave, Reptil, Mamifero, Pez):
+  pass
+
+print("""\nEJERCICIO 3: Un hijo ha heredado de su padre todas sus características, sin embargo, tienen diferentes hobbies. Logra que la clase Hijo herede de Padre todos sus métodos y atributos, sobreescribiendo el método hobby() para que se devuelva[1]: "Juego videojuegos en mi tiempo libre"
+[1]: asegúrate de utilizar return seguido de una cadena de texto\n""")
+
+class Padre():
+  color_ojos = "marrón"
+  tipo_pelo = "rulos"
+  altura = "media"
+  voz = "grave"
+  deporte_preferido = "tenis"
+  def reir(self):
+    return "Jajaja"
+  def hobby(self):
+    return "Pinto madera en mi tiempo libre"
+  def caminar(self):
+    return "Caminando con pasos largos y rápidos"
+
+class Hijo(Padre):
+  def hobby(self):
+    return "Juego videojuegos en mi tiempo libre"
+ernes = Hijo()
+print(ernes.hobby())
 
